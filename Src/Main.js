@@ -4,7 +4,7 @@ let config = {
     type: Phaser.AUTO,
     width: 740,
     height: 700,
-    scene: [Menu, Text, Play],
+    scene: [Load, Menu, Text, Play],
 };
 
 //apply configurations to new Phaser Game
