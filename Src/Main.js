@@ -1,10 +1,10 @@
 //Configure game to browser and include menu and play core scenes
 let config = {
 
-    type: Phaser.CANVAS,
+    type: Phaser.AUTO,
     width: 740,
     height: 700,
-    scene: [Menu],
+    scene: [Menu, Text, Play],
 };
 
 //apply configurations to new Phaser Game
