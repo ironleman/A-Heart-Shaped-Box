@@ -8,7 +8,7 @@ class Menu extends Phaser.Scene {
 
     preload(){
 
-        this.load.image("nightroad", "./Assets/NightRoad.png");
+        this.load.image("nightroad", "./Assets/NightRoadTS.png");
     }
 
     create(){
