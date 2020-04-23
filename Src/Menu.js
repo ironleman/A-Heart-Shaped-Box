@@ -19,6 +19,15 @@ class Menu extends Phaser.Scene {
         this.add.image(660, 100, "moon");
 
         this.add.text(450, 480, "A Heart-Shaped Box", {fontFamily: "Times New Roman", fontSize: "52px", color: "#FF0000"}).setOrigin(0.5);
+
+        let cursors= this.input.keyboard.createCursorKeys(); 
+        let space= this.input.keyboard.addKey("SPACE");
+        space.on('down', () => {
+            this.scene.start("textScene");
+        });
+        
+
+      
     }
 
     update(){
