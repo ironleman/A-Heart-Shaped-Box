@@ -1,4 +1,5 @@
 //Configure game to browser and include menu and play core scenes
+//test
 let config = {
 
     type: Phaser.AUTO,
