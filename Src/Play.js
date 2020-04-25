@@ -4,13 +4,13 @@ class Play extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image("nightroad", "./Assets/NightRoad.png");
+        this.load.image("road", "./Assets/NightRoad.png");
 
     }
 
     create(){
 
-        this.road= this.add.tileSprite(0, 0, 1500, 1700, "nightroad");
+        this.road= this.add.tileSprite(0, 0, 1500, 1700, "road");
 
 
         this.bgm= this.sound.add("ominous");
