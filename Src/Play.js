@@ -27,6 +27,8 @@ class Play extends Phaser.Scene {
         
         this.bgm.play(musicConfig);
 
+        this.jude = this.add.sprite(120, game.config.height/2, 'jude_atlas', 'Jude1');
+
     }
 
     update(){

@@ -9,7 +9,7 @@ class Load extends Phaser.Scene {
         this.load.audio("moan", "./Assets/413150__inspectorj__moaning-of-the-dead-a.mp3");
         this.load.audio("guitar", "./Assets/434953__mr-guitarra__guitar-riff.mp3");
         this.load.video("cars", "./Assets/Cars on the Road Night time lapse - No Copyright Video - 4K [720p]_Trim.mp4", "loadeddata", false, true);
-        this.load.atlas("jude_atlas", "judesheet.png", "jude.json");
+        this.load.atlas("jude_atlas", "./Assets/judesheet.png", "./Assets/jude.json");
     }
 
     create(){
