@@ -5,6 +5,16 @@ let config = {
     type: Phaser.AUTO,
     width: 740,
     height: 700,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: {
+                x: 0,
+                y: 0
+            }
+        }
+    },
+
     scene: [Load, Menu, Text, Play],
 };
 
