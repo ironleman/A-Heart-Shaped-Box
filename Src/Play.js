@@ -33,7 +33,7 @@ class Play extends Phaser.Scene {
 
     update(){
 
-        this.road.tilePositionX -=6;
+        this.road.tilePositionX +=6;
 
     }
 
