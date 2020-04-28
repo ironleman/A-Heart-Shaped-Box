@@ -32,14 +32,14 @@ class Play extends Phaser.Scene {
         this.instructions= this.add.text(centerX, 150, "Press Space to Jump", {fontFamily: "Times New Roman", fontSize: "32px", color: "#FF0000"}).setOrigin(0.5);
 
         
-        this.run = this.anims.create({ 
+        this.anims.create({ 
             key: 'run', 
             frames: this.anims.generateFrameNames('jude_atlas', {      
                 prefix: 'Jude',
                 start: 1,
                 end: 3,
-                suffix: '',
-                zeroPad: 4 
+                suffix: '.png',
+                //zeroPad: 4 
             }), 
             frameRate: 30,
             repeat: -1 
@@ -57,7 +57,7 @@ class Play extends Phaser.Scene {
         this.road.tilePositionX +=6;
 
         //to do: update animation so that it plays every frame
-        this.run.anims.play('run', true);
+        
 
         this.delayText.setText('Time: ' + Math.floor(this.clock.getElapsedSeconds().toString().substr(0, 4)) + "s");
 

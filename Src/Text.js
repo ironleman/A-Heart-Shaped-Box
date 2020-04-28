@@ -3,12 +3,12 @@ class Text extends Phaser.Scene {
         super("textScene"); 
     }
 
-
+   
 
     create(){
 
-        this.add.text(centerX, 250, "Story text", {fontFamily: "Times New Roman", fontSize: "32px", color: "#FFFFFF"}).setOrigin(0.5);
-        
+        this.text= this.add.text(centerX, 100, "Story Text", {fontFamily: "Times New Roman", fontSize: "32px", color: "#FFFFFF"}).setOrigin(0.5);
+       
         this.add.text(centerX, 650, "Press any key to continue", {fontFamily: "Times New Roman", fontSize: "28px", color: "#FF0000"}).setOrigin(0.5);
 
         this.bgm= this.sound.add("moan");
@@ -24,10 +24,12 @@ class Text extends Phaser.Scene {
         }
         
         this.bgm.play(musicConfig);
-
+        
         this.input.keyboard.on('keydown', () => {
             this.bgm.stop();
             this.scene.start("playScene");  
         }, this);
     }
+
+   
 }
