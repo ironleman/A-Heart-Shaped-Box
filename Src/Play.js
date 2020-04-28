@@ -56,7 +56,7 @@ class Play extends Phaser.Scene {
 
         this.road.tilePositionX +=6;
 
-        
+        //to do: update animation so that it plays every frame
         
         this.delayText.setText('Time: ' + Math.floor(this.clock.getElapsedSeconds().toString().substr(0, 4)) + "s");
 
