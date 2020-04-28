@@ -30,10 +30,11 @@ class Load extends Phaser.Scene {
         
         this.bgm.play(musicConfig);
 
-        this.add.video(centerX, centerY, "cars");
+        this.vid = this.add.video(centerX, centerY, "cars");
+        this.vid.play();
         this.add.text(130, 310, "SJD L.L.C.", {fontFamily: "Broadway" , fontSize: "100px", color: "#FF0000", stroke: "#000000", strokeThickness:30});
 
-        this.clock= this.time.delayedCall(15000, () => {
+        this.clock= this.time.delayedCall(5000, () => {
            
             this.scene.start("menuScene");
             this.bgm.stop();
