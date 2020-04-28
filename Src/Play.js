@@ -4,13 +4,14 @@ class Play extends Phaser.Scene {
     }
 
     preload(){
-        this.load.image("road", "./Assets/NightRoad.png");
+        this.load.image("nightroad", "./Assets/NightRoad.png");
         this.load.image("heart", "./Assets/Hbox.png");
+        this.load.image("craddock", "./Assets/Craddock.png");
     }
 
     create(){
 
-        this.road= this.add.tileSprite(0, 0, 1500, 1700, "road");
+        this.road= this.add.tileSprite(0, 0, 1500, 1700, "nightroad");
 
         degree= 0;
 
@@ -35,7 +36,10 @@ class Play extends Phaser.Scene {
 
         this.instructions= this.add.text(centerX, 150, "Press Space to Jump", {fontFamily: "Times New Roman", fontSize: "32px", color: "#FF0000"}).setOrigin(0.5);
 
-        
+        this.moon = this.add.image(660, 30, "moon").setScale(0.5, 0.5);
+
+        this.enemy = this.add.image(game.config.width/5, game.config.height/2, 'craddock').setScale(0.5, 0.5);
+
         this.run = this.anims.create({ 
             key: 'run', 
             frames: this.anims.generateFrameNames('jude_atlas', {      
