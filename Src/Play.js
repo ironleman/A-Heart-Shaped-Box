@@ -53,6 +53,7 @@ class Play extends Phaser.Scene {
             repeat: -1 
         });
         
+        //a timer configuration for tracking length of in-game survival; every second and calls back on increase time
         this.delayText= this.add.text(0, 100);  
         this.difficultyTimer = this.time.addEvent({
             delay: 1000,
@@ -71,9 +72,16 @@ class Play extends Phaser.Scene {
         //to do: update animation so that it plays every frame
         //this.run.anims.play('run', true);
 
+        //Display the time on-screen in seconds
         this.delayText.setText('Time: ' + Math.floor(degree) + "s");
 
-
+          // moon offset rotation
+          this.moon.x -= 1;
+          if (this.moon.x <= -150) {
+              this.moon.x = game.config.width + 20;
+          }
+  
+          this.instructions.x -= 4;
 
         // heart movement / resetting
         this.num = Math.floor(Math.random() * Math.floor(150));
@@ -86,7 +94,7 @@ class Play extends Phaser.Scene {
            }
         }
     }
-
+    //function that increments time passing by
     degreeBump(){
         degree++;
     }
