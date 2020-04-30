@@ -40,22 +40,22 @@ class Play extends Phaser.Scene {
 
         this.enemy = this.add.image(game.config.width/5, game.config.height/2, 'craddock').setScale(0.5, 0.5);
 
-        this.run = this.anims.create({ 
+        this.anims.create({ 
             key: 'run', 
             frames: this.anims.generateFrameNames('jude_atlas', {      
                 prefix: 'Jude',
                 start: 1,
                 end: 3,
                 suffix: '',
-                zeroPad: 4 
+                zeroPad: 1
             }), 
-            frameRate: 30,
+            frameRate: 14,
             repeat: -1 
         });
         
         //a timer configuration for tracking length of in-game survival; every second and calls back on increase time
         this.delayText= this.add.text(0, 100);  
-        this.difficultyTimer = this.time.addEvent({
+        this.gameTimer = this.time.addEvent({
             delay: 1000,
             callback: this.degreeBump,
             callbackScope: this,
@@ -70,7 +70,7 @@ class Play extends Phaser.Scene {
         this.road.tilePositionX +=6;
 
         //to do: update animation so that it plays every frame
-        //this.run.anims.play('run', true);
+        this.jude.anims.play('run', true);
 
         //Display the time on-screen in seconds
         this.delayText.setText('Time: ' + Math.floor(degree) + "s");
@@ -81,7 +81,7 @@ class Play extends Phaser.Scene {
               this.moon.x = game.config.width + 20;
           }
   
-          this.instructions.x -= 4;
+          this.instructions.x -= 2;
 
         // heart movement / resetting
         this.num = Math.floor(Math.random() * Math.floor(150));

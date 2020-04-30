@@ -15,7 +15,7 @@ let config = {
         }
     },
 
-    scene: [Load, Menu, Text, Play],
+    scene: [Load, Menu, Text, Play, GameOver],
 };
 
 //apply configurations to new Phaser Game
