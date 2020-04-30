@@ -34,7 +34,7 @@ class Play extends Phaser.Scene {
 
         this.obstacle = this.add.sprite(game.config.width, game.config.height/2 + 100, 'heart');
 
-        this.instructions= this.add.text(centerX, 150, "Press Space to Jump", {fontFamily: "Times New Roman", fontSize: "32px", color: "#FF0000"}).setOrigin(0.5);
+        this.instructions= this.add.text(centerX, 160, "Press Space to Jump", {fontFamily: "Times New Roman", fontSize: "45px", color: "#FF0000"}).setOrigin(0.5);
 
         this.moon = this.add.image(660, 30, "moon").setScale(0.5, 0.5);
 
@@ -78,7 +78,9 @@ class Play extends Phaser.Scene {
           // moon offset rotation
           this.moon.x -= 1;
           if (this.moon.x <= -150) {
-              this.moon.x = game.config.width + 20;
+              
+            this.moon.x = game.config.width + 20;
+              
           }
   
           this.instructions.x -= 2;
