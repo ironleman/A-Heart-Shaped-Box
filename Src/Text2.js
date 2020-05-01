@@ -11,20 +11,6 @@ class Text2 extends Phaser.Scene {
 
         this.add.text(575, 680, "Press any key to continue", {fontFamily: "Times New Roman", fontSize: "28px", color: "#FF0000"}).setOrigin(0.5);
 
-        this.bgm= this.sound.add("moan");
-
-        let musicConfig= {
-            mute: false,
-            volume: 0.1,
-            rate: 1,
-            detune: 0,
-            seek: 0,
-            loop: true,
-            delay: 0
-        }
-        
-        this.bgm.play(musicConfig);
-        
         this.input.keyboard.on('keydown', () => {
             this.bgm.stop();
             this.scene.start("textThreeScene");  

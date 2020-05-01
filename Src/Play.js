@@ -32,13 +32,13 @@ class Play extends Phaser.Scene {
 
         this.jude = this.physics.add.sprite(game.config.width/2, game.config.height/2, 'jude_atlas', 'Jude1');
 
-        this.obstacle = this.add.sprite(game.config.width, game.config.height/2 + 100, 'heart');
+        this.obstacle = this.add.sprite(game.config.width+1400, game.config.height/2 + 100, 'heart');
 
         this.instructions= this.add.text(centerX, 160, "Press Space to Jump", {fontFamily: "Times New Roman", fontSize: "45px", color: "#FF0000"}).setOrigin(0.5);
 
         this.moon = this.add.image(660, 30, "moon").setScale(0.5, 0.5);
 
-        this.enemy = this.add.image(game.config.width/5, game.config.height/2, 'craddock').setScale(0.5, 0.5);
+        this.enemy = this.add.image(game.config.width/5 -100, game.config.height/2, 'craddock').setScale(0.5, 0.5);
 
         this.anims.create({ 
             key: 'run', 

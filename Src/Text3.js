@@ -11,18 +11,6 @@ class Text3 extends Phaser.Scene {
 
         this.bgm= this.sound.add("moan");
 
-        let musicConfig= {
-            mute: false,
-            volume: 0.1,
-            rate: 1,
-            detune: 0,
-            seek: 0,
-            loop: true,
-            delay: 0
-        }
-        
-        this.bgm.play(musicConfig);
-        
         this.input.keyboard.on('keydown', () => {
             this.bgm.stop();
             this.scene.start("playScene");  
