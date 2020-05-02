@@ -40,9 +40,24 @@ create(){
     this.add.image(140, 500, "heart");
     this.add.image(640, 500, "heart");
 
+    this.bgm= this.sound.add("moan");
+
+        let musicConfig= {
+            mute: false,
+            volume: 1,
+            rate: 1,
+            detune: 0,
+            seek: 0,
+            loop: true,
+            delay: 0
+        }
+        
+        this.bgm.play(musicConfig);
+
+
     let space= this.input.keyboard.addKey("SPACE");
         space.on('down', () => {
-
+            this.bgm.stop();
             this.scene.start("playScene");
         });
     

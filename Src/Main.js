@@ -29,3 +29,5 @@ let degree;
 
 let highScore;
 let newHighScore= false;
+
+let cursors;
