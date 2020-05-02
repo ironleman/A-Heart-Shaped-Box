@@ -34,7 +34,7 @@ class Play extends Phaser.Scene {
 
         this.obstacle = this.physics.add.sprite(game.config.width+3700, game.config.height/2 + 100, 'heart');
 
-        this.instructions= this.add.text(centerX, 160, "Up Down Arrows to Jump", {fontFamily: "Times New Roman", fontSize: "45px", color: "#FF0000"}).setOrigin(0.5);
+        this.instructions= this.add.text(centerX, 160, "Jump using Up & Down Arrows", {fontFamily: "Times New Roman", fontSize: "45px", color: "#FF0000"}).setOrigin(0.5);
 
         this.moon = this.add.image(660, 30, "moon").setScale(0.5, 0.5);
 
