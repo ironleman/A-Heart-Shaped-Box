@@ -32,9 +32,9 @@ class Play extends Phaser.Scene {
 
         this.jude = this.physics.add.sprite(game.config.width/2, game.config.height/2, 'jude_atlas', 'Jude1');
 
-        this.obstacle = this.physics.add.sprite(game.config.width+3500, game.config.height/2 + 100, 'heart');
+        this.obstacle = this.physics.add.sprite(game.config.width+3700, game.config.height/2 + 100, 'heart');
 
-        this.instructions= this.add.text(centerX, 160, "Use Up & Down Arrows to Jump Over Hearts", {fontFamily: "Times New Roman", fontSize: "45px", color: "#FF0000"}).setOrigin(0.5);
+        this.instructions= this.add.text(centerX, 160, "Up Down Arrows to Jump", {fontFamily: "Times New Roman", fontSize: "45px", color: "#FF0000"}).setOrigin(0.5);
 
         this.moon = this.add.image(660, 30, "moon").setScale(0.5, 0.5);
 
@@ -94,7 +94,7 @@ class Play extends Phaser.Scene {
         if(cursors.up.isDown) {
             this.jude.body.velocity.y -= 20;
         } else if(cursors.down.isDown){
-            this.jude.body.velocity.y += 10;
+            this.jude.body.velocity.y += 15;
         }
         
            
@@ -109,7 +109,7 @@ class Play extends Phaser.Scene {
               
           }
   
-          this.instructions.x -= 2;
+          this.instructions.x -= 1;
 
         // heart movement / resetting
         this.num = Math.floor(Math.random() * Math.floor(150));
