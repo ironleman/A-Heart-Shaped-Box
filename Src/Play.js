@@ -94,7 +94,7 @@ class Play extends Phaser.Scene {
         if(cursors.up.isDown) {
             this.jude.body.velocity.y -= 20;
         } else if(cursors.down.isDown){
-            this.jude.body.velocity.y += 15;
+            this.jude.body.velocity.y += 10;
         }
         
            
