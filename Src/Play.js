@@ -11,6 +11,8 @@ class Play extends Phaser.Scene {
 
     create(){
 
+        this.Jump_Velocity= -500;
+
         this.road= this.add.tileSprite(0, 0, 1500, 1700, "nightroad");
 
         degree= 0;
@@ -52,6 +54,12 @@ class Play extends Phaser.Scene {
             frameRate: 14,
             repeat: -1 
         });
+
+        this.anims.create({
+            key: 'jump',
+            defaultTextureKey: 'jude_atlas',
+            frames: [{frame: 'Jude2'}],
+        });
         
         //a timer configuration for tracking length of in-game survival; every second and calls back on increase time
         this.delayText= this.add.text(0, 100);  
@@ -62,6 +70,7 @@ class Play extends Phaser.Scene {
             loop: true
         });
 
+        let cursors= this.input.keyboard.createCursorKeys();
 
     }
 
@@ -95,6 +104,7 @@ class Play extends Phaser.Scene {
                 this.obstacle.x = game.config.width;
            }
         }
+       
     }
     //function that increments time passing by
     degreeBump(){

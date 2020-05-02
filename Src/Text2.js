@@ -12,7 +12,7 @@ class Text2 extends Phaser.Scene {
         this.add.text(575, 680, "Press any key to continue", {fontFamily: "Times New Roman", fontSize: "28px", color: "#FF0000"}).setOrigin(0.5);
 
         this.input.keyboard.on('keydown', () => {
-            this.bgm.stop();
+            
             this.scene.start("textThreeScene");  
         }, this);
 

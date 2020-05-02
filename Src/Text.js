@@ -26,7 +26,7 @@ class Text extends Phaser.Scene {
         this.bgm.play(musicConfig);
         
         this.input.keyboard.on('keydown', () => {
-            this.bgm.stop();
+            
             this.scene.start("textTwoScene");  
         }, this);
     }
