@@ -119,6 +119,7 @@ class Play extends Phaser.Scene {
         if (this.obstacle.x <= 0) {
             if(this.num == 10){
                 this.obstacle.x = game.config.width;
+                this.obstacle.y = Math.random() * (650 - 75) + 75;
            }
         }
 
